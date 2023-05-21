@@ -48,7 +48,7 @@ class Zoo:
         return self.animals[index]
 
     def get_by_type(self,animal_type):
-        animals = []
+        return [animal for animal in self.animals if animal.type == animal_type]
         for animal in self.animals:
             if animal._animal_type == animal_type:
                 animals.append(animal)
