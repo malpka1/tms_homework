@@ -8,7 +8,7 @@ load_dotenv()
 print(f"ENV {os.environ.get('ENV')}")
 
 
-URL = "https://jsonplaceholder.typicode.com/todos"
+URL = os.environ.get('URL')}
 
 response = requests.get(URL)
 print(response.json())
