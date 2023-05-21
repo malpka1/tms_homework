@@ -37,7 +37,7 @@ class Todos:
             if todo.id == id:
                 return todo
         raise KeyError(f"Todo with id {id} not found")
-        def to_json(self):
+    def to_json(self):
             return json.dumps([todo.__dict__ for todo in self.todos])
 
     @classmethod
